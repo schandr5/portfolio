@@ -1,0 +1,17 @@
+<p-timeline [value]="events" layout="vertical" align="left">
+  <ng-template pTemplate="marker" let-event>
+    <i [class]="event.icon"></i>
+  </ng-template>
+  
+  <ng-template pTemplate="content" let-event>
+    <p-card class="work-card">
+      <p-header>
+        <h3 class="job-title">{{ event.status }}</h3>
+        <p class="job-meta">{{ event.date }} | {{ event.company }}</p>
+      </p-header>
+      <ul>
+        <li *ngFor="let point of event.details">{{ point }}</li>
+      </ul>
+    </p-card>
+  </ng-template>
+</p-timeline>

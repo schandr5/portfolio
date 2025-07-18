@@ -1,0 +1,37 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;  /* Stack tags vertically */
+    align-items: center;     /* Center the tags horizontally */
+    gap: 10px;               /* Space between the tags */
+    margin-top: 20px;
+  }
+  
+  .btn {
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 20px;  /* Rounded corners */
+    background-color: #007bff;  /* Light blue background */
+    color: white;  /* Text color */
+    border: none;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    width: 250px;    /* Set a fixed width for all tags */
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    transform: scale(1.05);  /* Slightly enlarge the tag on hover */
+  }
+  
+  .btn:active {
+    transform: scale(1);  /* Reset size on click */
+  }
+  
+  @media (max-width: 600px) {
+    .btn {
+      font-size: 12px;
+      padding: 6px 12px;  /* Adjust size for smaller screens */
+      width: 200px;       /* Adjust width for smaller screens */
+    }
+  }
+  

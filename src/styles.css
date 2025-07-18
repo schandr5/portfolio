@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* Hide the timeline connectors (the < > symbols) */
+.p-timeline-event-connector {
+    display: none !important;
+  }
+  
+  /* Hide the opposite column (right side) */
+  .p-timeline .p-timeline-event-opposite {
+    display: none !important;
+  }
+  
+  /* Hide the timeline event markers (small circles or icons) */
+  .p-timeline .p-timeline-event-marker {
+    display: none !important;
+  }
+  

@@ -1,0 +1,29 @@
+.work-card {
+  margin-bottom: 40px; /* Adds space between job cards */
+  padding: 20px;
+}
+
+.job-title {
+  font-size: 1.5em;
+  margin-top: 30px; /* Space above each job title */
+  margin-bottom: 5px;
+}
+
+.job-meta {
+  font-size: 1em;
+  color: gray;
+  margin-bottom: 15px; /* Space between title and bullet points */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.p-timeline .p-timeline-event-opposite {
+  display: none; /* Removes the empty column on the right */
+}
