@@ -242,7 +242,6 @@
 }
 
 .availability-card,
-.response-time-card,
 .preferences-card {
   background: white;
   padding: 25px;
@@ -252,7 +251,6 @@
 }
 
 .availability-card:hover,
-.response-time-card:hover,
 .preferences-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
@@ -302,7 +300,6 @@
   margin: 0;
 }
 
-.response-header,
 .preferences-header {
   display: flex;
   align-items: center;
@@ -310,47 +307,16 @@
   margin-bottom: 20px;
 }
 
-.response-header i,
 .preferences-header i {
   font-size: 1.2rem;
   color: #fbbf24;
 }
 
-.response-header h4,
 .preferences-header h4 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
-}
-
-.response-details {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.response-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #f1f3f4;
-}
-
-.response-item:last-child {
-  border-bottom: none;
-}
-
-.response-method {
-  font-weight: 600;
-  color: #2c3e50;
-  font-size: 0.9rem;
-}
-
-.response-time {
-  color: #6c757d;
-  font-size: 0.9rem;
 }
 
 .preferences-list {
@@ -451,14 +417,12 @@
 .contact-method:nth-child(3) { animation-delay: 0.3s; }
 
 .availability-card,
-.response-time-card,
 .preferences-card {
   animation: slideInUp 0.6s ease-out;
 }
 
 .availability-card { animation-delay: 0.1s; }
-.response-time-card { animation-delay: 0.2s; }
-.preferences-card { animation-delay: 0.3s; }
+.preferences-card { animation-delay: 0.2s; }
 
 /* Responsive Design */
 @media (max-width: 992px) {
@@ -550,7 +514,6 @@
   }
   
   .availability-card,
-  .response-time-card,
   .preferences-card {
     padding: 20px;
   }
