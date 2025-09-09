@@ -1,21 +1,61 @@
-<div class="container">
-  <div class="page-header">
-    <h1 id="timeline">Projects</h1>
+<!-- Projects Header -->
+<div class="projects-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="page-title">Projects</h1>
+        <p class="page-subtitle">Exploring technology through hands-on development</p>
+      </div>
+    </div>
   </div>
-  <p-timeline [value]="projects" layout="vertical" align="left">
-    <ng-template pTemplate="marker" let-project>
-      <i class="pi pi-briefcase"></i>  <!-- Same icon for all projects -->
-    </ng-template>
-    <ng-template pTemplate="content" let-project>
-      <p-card class="project-card">
-        <p-header>
-          <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-meta">{{ project.date }}</p>
-        </p-header>
-        <ul>
-          <li *ngFor="let point of project.details">{{ point }}</li>
-        </ul>
-      </p-card>
-    </ng-template>
-  </p-timeline>
+</div>
+
+<!-- Projects Grid -->
+<div class="projects-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mb-4" *ngFor="let project of projects; let i = index">
+        <div class="project-card" [class.featured]="i === 0">
+          <div class="project-card-header">
+            <div class="project-icon">
+              <i class="pi pi-briefcase"></i>
+            </div>
+            <div class="project-badge" *ngIf="i === 0">
+              <span class="badge featured-badge">Latest</span>
+            </div>
+          </div>
+          
+          <div class="project-card-body">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="project-date">{{ project.date }}</span>
+            
+            <div class="project-description">
+              <h5 class="description-title">Project Highlights</h5>
+              <ul class="project-features">
+                <li *ngFor="let point of project.details" class="feature-item">
+                  <i class="bi bi-arrow-right-circle-fill"></i>
+                  <span>{{ point }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="project-card-footer">
+            <div class="tech-stack">
+              <span class="tech-tag" *ngIf="project.title.includes('Angular') || project.title.includes('Budget Analyzer')">Angular</span>
+              <span class="tech-tag" *ngIf="project.title.includes('Spring Boot') || project.title.includes('Budget Analyzer')">Spring Boot</span>
+              <span class="tech-tag" *ngIf="project.title.includes('GraphQL') || project.title.includes('Budget Analyzer')">GraphQL</span>
+              <span class="tech-tag" *ngIf="project.title.includes('Gen-AI') || project.title.includes('Budget Analyzer')">Gen-AI</span>
+              <span class="tech-tag" *ngIf="project.title.includes('Node')">Node.js</span>
+              <span class="tech-tag" *ngIf="project.title.includes('MongoDB')">MongoDB</span>
+              <span class="tech-tag" *ngIf="project.title.includes('AWS')">AWS</span>
+              <span class="tech-tag" *ngIf="project.title.includes('SQL')">SQL</span>
+              <span class="tech-tag" *ngIf="project.title.includes('JavaScript')">JavaScript</span>
+              <span class="tech-tag" *ngIf="project.title.includes('TypeScript')">TypeScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

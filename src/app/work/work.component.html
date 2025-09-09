@@ -1,17 +1,46 @@
-<p-timeline [value]="events" layout="vertical" align="left">
-  <ng-template pTemplate="marker" let-event>
-    <i [class]="event.icon"></i>
-  </ng-template>
-  
-  <ng-template pTemplate="content" let-event>
-    <p-card class="work-card">
-      <p-header>
-        <h3 class="job-title">{{ event.status }}</h3>
-        <p class="job-meta">{{ event.date }} | {{ event.company }}</p>
-      </p-header>
-      <ul>
-        <li *ngFor="let point of event.details">{{ point }}</li>
-      </ul>
-    </p-card>
-  </ng-template>
-</p-timeline>
+<div class="work-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="page-title">Work Experience</h1>
+        <p class="page-subtitle">Building impactful solutions across diverse industries</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="work-experience-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" *ngFor="let event of events; let i = index">
+        <div class="work-card" [class.current-role]="i === 0">
+          <div class="work-card-header">
+            <div class="company-logo">
+              <i [class]="event.icon"></i>
+            </div>
+            <div class="work-info">
+              <h3 class="job-title">{{ event.status }}</h3>
+              <h4 class="company-name">{{ event.company }}</h4>
+              <span class="work-duration">{{ event.date }}</span>
+            </div>
+            <div class="work-badge" *ngIf="i === 0">
+              <span class="badge current-badge">Current Role</span>
+            </div>
+          </div>
+          
+          <div class="work-card-body">
+            <div class="achievements">
+              <h5 class="achievements-title">Key Achievements</h5>
+              <ul class="achievements-list">
+                <li *ngFor="let point of event.details" class="achievement-item">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span>{{ point }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

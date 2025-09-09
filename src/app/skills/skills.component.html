@@ -1,3 +1,78 @@
-<div class="skills-container">
-  <button *ngFor="let skill of skills" class="btn btn-primary">{{ skill.name }}</button>
+<div class="skills-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h1 class="page-title">Technical Skills</h1>
+        <p class="page-subtitle">Technologies and tools I work with</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="skills-section">
+  <div class="container">
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button 
+        class="filter-btn active" 
+        (click)="filterByCategory('all')"
+        [class.active]="selectedCategory === 'all'">
+        All Skills
+      </button>
+      <button 
+        *ngFor="let category of categories" 
+        class="filter-btn"
+        (click)="filterByCategory(category)"
+        [class.active]="selectedCategory === category">
+        {{ category }}
+      </button>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="skills-grid">
+      <div 
+        *ngFor="let skill of filteredSkills; let i = index" 
+        class="skill-card"
+        [style.animation-delay]="(i * 0.1) + 's'"
+        (mouseenter)="onSkillHover(skill)"
+        (mouseleave)="onSkillLeave()">
+        
+        <div class="skill-icon" [style.background-color]="skill.color">
+          <i [class]="skill.icon"></i>
+        </div>
+        
+        <div class="skill-info">
+          <h3 class="skill-name">{{ skill.name }}</h3>
+          <p class="skill-description">{{ skill.description }}</p>
+        </div>
+        
+        <div class="skill-category">{{ skill.category }}</div>
+      </div>
+    </div>
+
+    <!-- Skills Summary -->
+    <div class="skills-summary">
+      <div class="row">
+        <div class="col-md-4 col-6 text-center">
+          <div class="summary-item">
+            <h3>{{ getTotalSkills() }}</h3>
+            <p>Technologies</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 text-center">
+          <div class="summary-item">
+            <h3>{{ getCategoriesCount() }}</h3>
+            <p>Categories</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+          <div class="summary-item">
+            <h3>{{ getYearsExperience() }}+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
