@@ -17,7 +17,6 @@ export class AcademicsComponent {
       degree: "Master's in Computer Science",
       date: 'Aug 2016 - May 2018',
       location: 'Virginia, USA',
-      gpa: '3.8/4.0',
       focus: 'Software Engineering & Systems Design',
       icon: 'fas fa-graduation-cap',
       achievements: [
@@ -33,7 +32,6 @@ export class AcademicsComponent {
       degree: "Bachelor's in Computer Science",
       date: 'Jun 2012 - May 2016',
       location: 'Hyderabad, India',
-      gpa: '3.6/4.0',
       focus: 'Computer Science Fundamentals',
       icon: 'fas fa-university',
       achievements: [

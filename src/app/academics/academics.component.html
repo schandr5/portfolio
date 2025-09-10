@@ -4,7 +4,6 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
         <h1 class="page-title">Education</h1>
-        <p class="page-subtitle">Academic foundation in computer science and engineering</p>
       </div>
     </div>
   </div>
@@ -37,10 +36,6 @@
               <span class="academic-duration">{{ academic.date }}</span>
               
               <div class="academic-details">
-                <div class="detail-item" *ngIf="academic.gpa">
-                  <i class="bi bi-award"></i>
-                  <span>GPA: {{ academic.gpa }}</span>
-                </div>
                 <div class="detail-item" *ngIf="academic.location">
                   <i class="bi bi-geo-alt"></i>
                   <span>{{ academic.location }}</span>
