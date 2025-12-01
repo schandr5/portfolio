@@ -1,0 +1,111 @@
+{
+  "about": {
+    "currentRole": "Currently at TriNet",
+    "greeting": "Hi, I'm",
+    "name": "Sahiti Chandramouli",
+    "subtitle": "Full Stack Developer & Software Engineer",
+    "description": "I'm a passionate software engineer with {{years}} years of experience building scalable applications. Currently enhancing HR platforms at TriNet, and previously contributed to critical infrastructure at Microsoft where I worked on BuildXL - a build engine used by major teams including Office and Windows.",
+    "years": "6+",
+    "experience": {
+      "trinet": "TriNet - Full Stack Developer (Current)",
+      "microsoft": "Microsoft - Software Engineer (3 years)",
+      "staples": "Staples - Software Engineer (3 years)"
+    },
+    "actions": {
+      "viewWork": "View My Work",
+      "getInTouch": "Get In Touch"
+    },
+    "techStack": {
+      "angular": "Angular",
+      "springBoot": "Spring Boot",
+      "csharp": "C#/.NET",
+      "java": "Java",
+      "graphql": "GraphQL"
+    },
+    "section": {
+      "title": "About Me",
+      "lead": "I specialize in full-stack development with expertise in Angular, Spring Boot, and enterprise-scale applications. My experience spans from building internal tools at Microsoft to developing customer-facing applications at Staples, and now enhancing HR platforms at TriNet.",
+      "description": "I'm passionate about creating efficient, scalable solutions and thrive in collaborative environments where I can contribute to meaningful projects while continuously learning and growing. Recently, I've expanded my expertise by completing a certification in Generative AI with Large Language Models, deepening my knowledge of AI integration and cutting-edge technology. When I'm not coding, you'll find me exploring new technologies or enjoying a good cup of coffee!",
+      "footer": "This portfolio was crafted with Angular 17 and a lot of coffee! ☕"
+    }
+  },
+  "work": {
+    "title": "Work Experience",
+    "currentRole": "Current Role",
+    "keyAchievements": "Key Achievements"
+  },
+  "projects": {
+    "title": "Projects",
+    "latest": "Latest",
+    "projectHighlights": "Project Highlights"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "allSkills": "All Skills",
+    "summary": {
+      "technologies": "Technologies",
+      "categories": "Categories",
+      "yearsExperience": "Years Experience"
+    }
+  },
+  "academics": {
+    "title": "Education",
+    "latest": "Latest",
+    "focus": "Focus",
+    "keyAchievements": "Key Achievements"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "latest": "Latest",
+    "verifyCertificate": "Verify Certificate"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "choosePreferredWay": "Choose Your Preferred Way to Connect",
+    "description": "I'm always interested in discussing new opportunities, innovative projects, and how I can contribute to your team's success.",
+    "email": {
+      "label": "Email",
+      "address": "sahitichandramouli07@gmail.com",
+      "description": "Best for detailed discussions and project inquiries",
+      "action": "Send Email",
+      "primary": "Primary"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "address": "linkedin.com/in/schandr",
+      "description": "Professional networking and career opportunities",
+      "action": "Connect on LinkedIn"
+    },
+    "github": {
+      "label": "GitHub",
+      "address": "github.com/schandr5",
+      "description": "View my code, projects, and technical contributions",
+      "action": "Visit GitHub"
+    },
+    "status": {
+      "title": "Current Status",
+      "available": "Available",
+      "description": "I'm currently available for new opportunities and exciting projects. Let's discuss how we can work together!"
+    },
+    "preferences": {
+      "title": "What I Love Working On",
+      "fullStack": "Full-Stack Development",
+      "aiIntegration": "AI Integration"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "emailMe": "Email Me",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  },
+  "navigation": {
+    "portfolio": "Portfolio",
+    "work": "WORK",
+    "projects": "PROJECTS",
+    "skills": "SKILLS",
+    "academics": "ACADEMICS",
+    "certifications": "CERTIFICATIONS",
+    "contact": "CONTACT"
+  }
+}

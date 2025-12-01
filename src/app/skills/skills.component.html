@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
-        <h1 class="page-title">Technical Skills</h1>
+        <h1 class="page-title">{{ t.title || constants.PAGE_TITLES.SKILLS }}</h1>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
         class="filter-btn active" 
         (click)="filterByCategory('all')"
         [class.active]="selectedCategory === 'all'">
-        All Skills
+        {{ t.allSkills || constants.FILTERS.ALL_SKILLS }}
       </button>
       <button 
         *ngFor="let category of categories" 
@@ -55,19 +55,19 @@
         <div class="col-md-4 col-6 text-center">
           <div class="summary-item">
             <h3>{{ getTotalSkills() }}</h3>
-            <p>Technologies</p>
+            <p>{{ t.technologies || constants.SUMMARY.TECHNOLOGIES }}</p>
           </div>
         </div>
         <div class="col-md-4 col-6 text-center">
           <div class="summary-item">
             <h3>{{ getCategoriesCount() }}</h3>
-            <p>Categories</p>
+            <p>{{ t.categories || constants.SUMMARY.CATEGORIES }}</p>
           </div>
         </div>
         <div class="col-md-4 col-12 text-center">
           <div class="summary-item">
             <h3>{{ getYearsExperience() }}+</h3>
-            <p>Years Experience</p>
+            <p>{{ t.yearsExperience || constants.SUMMARY.YEARS_EXPERIENCE }}</p>
           </div>
         </div>
       </div>

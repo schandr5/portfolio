@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { TranslationService } from '../services/translation.service';
+import { AppConstants } from '../constants/app.constants';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +12,21 @@ import { CardModule } from 'primeng/card';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  constants = AppConstants;
+  t: any = {};
+
+  constructor(private translationService: TranslationService) {}
+
+  ngOnInit(): void {
+    this.translationService.loadTranslations().subscribe(() => {
+      this.t = {
+        title: this.translationService.get('projects.title'),
+        latest: this.translationService.get('projects.latest'),
+        projectHighlights: this.translationService.get('projects.projectHighlights')
+      };
+    });
+  }
   projects = [
     {
       title: 'Budget Analyzer',

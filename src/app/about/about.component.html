@@ -4,39 +4,37 @@
       <div class="col-lg-6">
         <div class="introduction-content">
           <div class="current-role-badge mb-3">
-            <span class="badge bg-primary">Currently at TriNet</span>
+            <span class="badge bg-primary">{{ t.currentRole || constants.BADGES.CURRENT_ROLE }}</span>
           </div>
           <h1 class="introduction-title">
-            Hi, I'm <span class="text-primary">Sahiti Chandramouli</span>
+            {{ t.greeting || 'Hi, I\'m' }} <span class="text-primary">{{ t.name || 'Sahiti Chandramouli' }}</span>
           </h1>
           <h2 class="introduction-subtitle">
-            Full Stack Developer & Software Engineer
+            {{ t.subtitle || 'Full Stack Developer & Software Engineer' }}
           </h2>
           <p class="introduction-description">
-            I'm a passionate software engineer with <strong>6+ years of experience</strong> building scalable applications. 
-            Currently enhancing HR platforms at <strong>TriNet</strong>, and previously contributed to critical infrastructure 
-            at <strong>Microsoft</strong> where I worked on BuildXL - a build engine used by major teams including Office and Windows.
+            {{ t.description || 'I\'m a passionate software engineer with 6+ years of experience building scalable applications. Currently enhancing HR platforms at TriNet, and previously contributed to critical infrastructure at Microsoft where I worked on BuildXL - a build engine used by major teams including Office and Windows.' }}
           </p>
           <div class="experience-highlights mb-4">
             <div class="experience-item">
               <i class="bi bi-building text-primary me-2"></i>
-              <span><strong>TriNet</strong> - Full Stack Developer (Current)</span>
+              <span><strong>{{ t.trinet || 'TriNet - Full Stack Developer (Current)' }}</strong></span>
             </div>
             <div class="experience-item">
               <i class="bi bi-building text-primary me-2"></i>
-              <span><strong>Microsoft</strong> - Software Engineer (3 years)</span>
+              <span><strong>{{ t.microsoft || 'Microsoft - Software Engineer (3 years)' }}</strong></span>
             </div>
             <div class="experience-item">
               <i class="bi bi-building text-primary me-2"></i>
-              <span><strong>Staples</strong> - Software Engineer (3 years)</span>
+              <span><strong>{{ t.staples || 'Staples - Software Engineer (3 years)' }}</strong></span>
             </div>
           </div>
           <div class="introduction-actions">
-            <a routerLink="/work" class="btn btn-primary btn-lg me-3">
-              <i class="bi bi-briefcase me-2"></i>View My Work
+            <a [routerLink]="constants.ROUTES.WORK" class="btn btn-primary btn-lg me-3">
+              <i class="bi bi-briefcase me-2"></i>{{ t.viewWork || constants.NAV_LABELS.WORK }}
             </a>
-            <a routerLink="/connect" class="btn btn-outline-primary btn-lg">
-              <i class="bi bi-envelope me-2"></i>Get In Touch
+            <a [routerLink]="constants.ROUTES.CONNECT" class="btn btn-outline-primary btn-lg">
+              <i class="bi bi-envelope me-2"></i>{{ t.getInTouch || 'Get In Touch' }}
             </a>
           </div>
         </div>
@@ -63,19 +61,15 @@
     <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="about-content text-center">
-          <h3 class="section-title mb-4">About Me</h3>
+          <h3 class="section-title mb-4">{{ t.sectionTitle || 'About Me' }}</h3>
           <p class="lead">
-            I specialize in full-stack development with expertise in Angular, Spring Boot, and enterprise-scale applications. 
-            My experience spans from building internal tools at Microsoft to developing customer-facing applications at Staples, 
-            and now enhancing HR platforms at TriNet.
+            {{ t.sectionLead || 'I specialize in full-stack development with expertise in Angular, Spring Boot, and enterprise-scale applications. My experience spans from building internal tools at Microsoft to developing customer-facing applications at Staples, and now enhancing HR platforms at TriNet.' }}
           </p>
           <p>
-            I'm passionate about creating efficient, scalable solutions and thrive in collaborative environments where I can 
-            contribute to meaningful projects while continuously learning and growing. When I'm not coding, you'll find me 
-            exploring new technologies or enjoying a good cup of coffee!
+            {{ t.sectionDescription || 'I\'m passionate about creating efficient, scalable solutions and thrive in collaborative environments where I can contribute to meaningful projects while continuously learning and growing. When I\'m not coding, you\'ll find me exploring new technologies or enjoying a good cup of coffee!' }}
           </p>
           <p class="text-muted">
-            <em>This portfolio was crafted with <strong>Angular 17</strong> and a lot of coffee! ☕</em>
+            <em>{{ t.sectionFooter || 'This portfolio was crafted with Angular 17 and a lot of coffee! ☕' }}</em>
           </p>
         </div>
       </div>

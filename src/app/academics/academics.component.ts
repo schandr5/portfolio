@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { TranslationService } from '../services/translation.service';
+import { AppConstants } from '../constants/app.constants';
 
 @Component({
   selector: 'app-academics',
@@ -10,7 +12,22 @@ import { CardModule } from 'primeng/card';
   templateUrl: './academics.component.html',
   styleUrls: ['./academics.component.css']
 })
-export class AcademicsComponent {
+export class AcademicsComponent implements OnInit {
+  constants = AppConstants;
+  t: any = {};
+
+  constructor(private translationService: TranslationService) {}
+
+  ngOnInit(): void {
+    this.translationService.loadTranslations().subscribe(() => {
+      this.t = {
+        title: this.translationService.get('academics.title'),
+        latest: this.translationService.get('academics.latest'),
+        focus: this.translationService.get('academics.focus'),
+        keyAchievements: this.translationService.get('academics.keyAchievements')
+      };
+    });
+  }
   academics = [
     {
       title: 'George Mason University',

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SkillsService } from './skills.service';
 import { SkillSet } from './skills.service';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../services/translation.service';
+import { AppConstants } from '../constants/app.constants';
 
 @Component({
   selector: 'app-skills',
@@ -15,13 +17,28 @@ export class SkillsComponent implements OnInit {
   filteredSkills: SkillSet[] = [];
   categories: string[] = [];
   selectedCategory: string = 'all';
+  constants = AppConstants;
+  t: any = {};
 
-  constructor(private skillsService: SkillsService) {}
+  constructor(
+    private skillsService: SkillsService,
+    private translationService: TranslationService
+  ) {}
 
   ngOnInit(): void {
     this.skills = this.skillsService.getSkills();
     this.filteredSkills = this.skills;
     this.categories = this.getCategories();
+    
+    this.translationService.loadTranslations().subscribe(() => {
+      this.t = {
+        title: this.translationService.get('skills.title'),
+        allSkills: this.translationService.get('skills.allSkills'),
+        technologies: this.translationService.get('skills.summary.technologies'),
+        categories: this.translationService.get('skills.summary.categories'),
+        yearsExperience: this.translationService.get('skills.summary.yearsExperience')
+      };
+    });
   }
 
   filterByCategory(category: string): void {
@@ -47,7 +64,7 @@ export class SkillsComponent implements OnInit {
   }
 
   getYearsExperience(): number {
-    return 6; // Based on your work experience
+    return AppConstants.EXPERIENCE_YEARS;
   }
 
   onSkillHover(skill: SkillSet): void {

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
-        <h1 class="page-title">Get In Touch</h1>
+        <h1 class="page-title">{{ t.title || constants.PAGE_TITLES.CONTACT }}</h1>
       </div>
     </div>
   </div>
@@ -13,25 +13,24 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="contact-methods-container">
-          <h2 class="section-title">Choose Your Preferred Way to Connect</h2>
+          <h2 class="section-title">{{ t.choosePreferredWay || constants.SECTIONS.CHOOSE_YOUR_PREFERRED_WAY }}</h2>
           <p class="section-description">
-            I'm always interested in discussing new opportunities, 
-            innovative projects, and how I can contribute to your team's success.
+            {{ t.description || 'I\'m always interested in discussing new opportunities, innovative projects, and how I can contribute to your team\'s success.' }}
           </p>
           
           <div class="contact-methods">
             <div class="contact-method primary">
               <div class="contact-icon">
                 <i class="bi bi-envelope-fill"></i>
-                <div class="icon-badge">Primary</div>
+                <div class="icon-badge">{{ t.emailPrimary || constants.BADGES.PRIMARY }}</div>
               </div>
               <div class="contact-details">
-                <h4>Email</h4>
-                <p class="contact-address">sahitichandramouli07&#64;gmail.com</p>
-                <p class="contact-description">Best for detailed discussions and project inquiries</p>
+                <h4>{{ t.emailLabel || constants.CONTACT.EMAIL }}</h4>
+                <p class="contact-address">{{ t.emailAddress || 'sahitichandramouli07@gmail.com' }}</p>
+                <p class="contact-description">{{ t.emailDescription || 'Best for detailed discussions and project inquiries' }}</p>
                 <a href="mailto:sahitichandramouli07@gmail.com" class="contact-link">
                   <i class="bi bi-arrow-right"></i>
-                  Send Email
+                  {{ t.emailAction || constants.CONTACT.SEND_EMAIL }}
                 </a>
               </div>
             </div>
@@ -41,12 +40,12 @@
                 <i class="bi bi-linkedin"></i>
               </div>
               <div class="contact-details">
-                <h4>LinkedIn</h4>
-                <p class="contact-address">linkedin.com/in/schandr</p>
-                <p class="contact-description">Professional networking and career opportunities</p>
+                <h4>{{ t.linkedinLabel || constants.CONTACT.LINKEDIN }}</h4>
+                <p class="contact-address">{{ t.linkedinAddress || 'linkedin.com/in/schandr' }}</p>
+                <p class="contact-description">{{ t.linkedinDescription || 'Professional networking and career opportunities' }}</p>
                 <a href="https://www.linkedin.com/in/schandr" target="_blank" class="contact-link">
                   <i class="bi bi-arrow-right"></i>
-                  Connect on LinkedIn
+                  {{ t.linkedinAction || constants.CONTACT.CONNECT_ON_LINKEDIN }}
                 </a>
               </div>
             </div>
@@ -56,12 +55,12 @@
                 <i class="bi bi-github"></i>
               </div>
               <div class="contact-details">
-                <h4>GitHub</h4>
-                <p class="contact-address">github.com/schandr5</p>
-                <p class="contact-description">View my code, projects, and technical contributions</p>
+                <h4>{{ t.githubLabel || constants.CONTACT.GITHUB }}</h4>
+                <p class="contact-address">{{ t.githubAddress || 'github.com/schandr5' }}</p>
+                <p class="contact-description">{{ t.githubDescription || 'View my code, projects, and technical contributions' }}</p>
                 <a href="https://github.com/schandr5" target="_blank" class="contact-link">
                   <i class="bi bi-arrow-right"></i>
-                  Visit GitHub
+                  {{ t.githubAction || constants.CONTACT.VISIT_GITHUB }}
                 </a>
               </div>
             </div>
@@ -74,15 +73,14 @@
         <div class="contact-sidebar">
           <div class="availability-card">
             <div class="availability-header">
-              <h4>Current Status</h4>
+              <h4>{{ t.statusTitle || constants.SECTIONS.CURRENT_STATUS }}</h4>
               <div class="status-indicator">
                 <span class="status-dot available"></span>
-                <span class="status-text">Available</span>
+                <span class="status-text">{{ t.statusAvailable || constants.BADGES.AVAILABLE }}</span>
               </div>
             </div>
             <p class="availability-description">
-              I'm currently available for new opportunities and exciting projects. 
-              Let's discuss how we can work together!
+              {{ t.statusDescription || 'I\'m currently available for new opportunities and exciting projects. Let\'s discuss how we can work together!' }}
             </p>
           </div>
           
@@ -90,16 +88,16 @@
           <div class="preferences-card">
             <div class="preferences-header">
               <i class="bi bi-heart"></i>
-              <h4>What I Love Working On</h4>
+              <h4>{{ t.preferencesTitle || constants.SECTIONS.WHAT_I_LOVE_WORKING_ON }}</h4>
             </div>
             <div class="preferences-list">
               <div class="preference-item">
                 <i class="bi bi-code-slash"></i>
-                <span>Full-Stack Development</span>
+                <span>{{ t.preferencesFullStack || 'Full-Stack Development' }}</span>
               </div>
               <div class="preference-item">
                 <i class="bi bi-robot"></i>
-                <span>AI Integration</span>
+                <span>{{ t.preferencesAiIntegration || 'AI Integration' }}</span>
               </div>
             </div>
           </div>
@@ -114,19 +112,19 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
-        <h3 class="actions-title">Quick Actions</h3>
+        <h3 class="actions-title">{{ t.quickActionsTitle || constants.SECTIONS.QUICK_ACTIONS }}</h3>
         <div class="action-buttons">
-          <a href="mailto:sahitichandramouli07&#64;gmail.com" class="action-btn">
+          <a href="mailto:sahitichandramouli07@gmail.com" class="action-btn">
             <i class="bi bi-envelope"></i>
-            <span>Email Me</span>
+            <span>{{ t.quickActionsEmailMe || constants.CONTACT.EMAIL_ME }}</span>
           </a>
           <a href="https://www.linkedin.com/in/schandr" target="_blank" class="action-btn">
             <i class="bi bi-linkedin"></i>
-            <span>LinkedIn</span>
+            <span>{{ t.quickActionsLinkedin || constants.CONTACT.LINKEDIN }}</span>
           </a>
           <a href="https://github.com/schandr5" target="_blank" class="action-btn">
             <i class="bi bi-github"></i>
-            <span>GitHub</span>
+            <span>{{ t.quickActionsGithub || constants.CONTACT.GITHUB }}</span>
           </a>
         </div>
       </div>

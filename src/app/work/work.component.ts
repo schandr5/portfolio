@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { TranslationService } from '../services/translation.service';
+import { AppConstants } from '../constants/app.constants';
 
 @Component({
   selector: 'app-work',
@@ -10,7 +12,21 @@ import { CardModule } from 'primeng/card';
   templateUrl: './work.component.html',
   styleUrl: './work.component.css'
 })
-export class WorkComponent {
+export class WorkComponent implements OnInit {
+  constants = AppConstants;
+  t: any = {};
+
+  constructor(private translationService: TranslationService) {}
+
+  ngOnInit(): void {
+    this.translationService.loadTranslations().subscribe(() => {
+      this.t = {
+        title: this.translationService.get('work.title'),
+        currentRole: this.translationService.get('work.currentRole'),
+        keyAchievements: this.translationService.get('work.keyAchievements')
+      };
+    });
+  }
   events = [
     {
       status: 'Full Stack Developer',
