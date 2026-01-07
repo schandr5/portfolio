@@ -39,6 +39,11 @@
     "latest": "Latest",
     "projectHighlights": "Project Highlights"
   },
+  "genAiProjects": {
+    "title": "Gen AI Projects",
+    "latest": "Latest",
+    "projectHighlights": "Project Highlights"
+  },
   "skills": {
     "title": "Technical Skills",
     "allSkills": "All Skills",
@@ -103,6 +108,7 @@
     "portfolio": "Portfolio",
     "work": "WORK",
     "projects": "PROJECTS",
+    "genAiProjects": "GEN AI PROJECTS",
     "skills": "SKILLS",
     "academics": "ACADEMICS",
     "certifications": "CERTIFICATIONS",

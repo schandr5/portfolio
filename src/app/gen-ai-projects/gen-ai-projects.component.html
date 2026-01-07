@@ -1,23 +1,23 @@
-<!-- Projects Header -->
-<div class="projects-header">
+<!-- Gen AI Projects Header -->
+<div class="gen-ai-projects-header">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
-        <h1 class="page-title">{{ t.title || constants.PAGE_TITLES.PROJECTS }}</h1>
+        <h1 class="page-title">{{ t.title || constants.PAGE_TITLES.GEN_AI_PROJECTS }}</h1>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Projects Grid -->
-<div class="projects-section">
+<!-- Gen AI Projects Grid -->
+<div class="gen-ai-projects-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6 mb-4" *ngFor="let project of projects; let i = index">
         <div class="project-card" [class.featured]="i === 0">
           <div class="project-card-header">
             <div class="project-icon">
-              <i class="pi pi-briefcase"></i>
+              <i class="pi pi-sparkles"></i>
             </div>
             <div class="project-badge" *ngIf="i === 0">
               <span class="badge featured-badge">{{ t.latest || constants.BADGES.LATEST }}</span>
@@ -41,16 +41,13 @@
           
           <div class="project-card-footer">
             <div class="tech-stack">
-              <span class="tech-tag" *ngIf="project.title.includes('Angular')">Angular</span>
-              <span class="tech-tag" *ngIf="project.title.includes('Spring Boot')">Spring Boot</span>
-              <span class="tech-tag" *ngIf="project.title.includes('GraphQL')">GraphQL</span>
-              <span class="tech-tag" *ngIf="project.title.includes('Gen-AI')">Gen-AI</span>
-              <span class="tech-tag" *ngIf="project.title.includes('Node')">Node.js</span>
-              <span class="tech-tag" *ngIf="project.title.includes('MongoDB')">MongoDB</span>
-              <span class="tech-tag" *ngIf="project.title.includes('AWS')">AWS</span>
-              <span class="tech-tag" *ngIf="project.title.includes('SQL')">SQL</span>
-              <span class="tech-tag" *ngIf="project.title.includes('JavaScript')">JavaScript</span>
-              <span class="tech-tag" *ngIf="project.title.includes('TypeScript')">TypeScript</span>
+              <span class="tech-tag" *ngFor="let tech of project.techStack">{{ tech }}</span>
+            </div>
+            <div class="project-links" *ngIf="project.githubUrl">
+              <a [href]="project.githubUrl" target="_blank" class="github-link">
+                <i class="bi bi-github"></i>
+                <span>View on GitHub</span>
+              </a>
             </div>
           </div>
         </div>
@@ -58,3 +55,4 @@
     </div>
   </div>
 </div>
+

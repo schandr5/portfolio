@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
         portfolio: this.translationService.get('navigation.portfolio'),
         work: this.translationService.get('navigation.work'),
         projects: this.translationService.get('navigation.projects'),
+        genAiProjects: this.translationService.get('navigation.genAiProjects'),
         skills: this.translationService.get('navigation.skills'),
         academics: this.translationService.get('navigation.academics'),
         certifications: this.translationService.get('navigation.certifications'),

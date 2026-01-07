@@ -34,11 +34,11 @@ export class WorkComponent implements OnInit {
       company: 'TriNet',
       icon: 'pi pi-briefcase',
       details: [
-        'Contribute to the Benefits & Strategic Solutions team at TriNet, focusing on enhancing the internal HR platform that supports employee benefits administration.',
-        'Design and implement Angular components to deliver dynamic, role-based benefits experiences, improving usability and interaction across the HR platform.',
-        'Build and connect Angular components with Spring Boot APIs to handle dynamic benefits eligibility, employee plan configurations, and rule-based enrollment flows within the HR platform.',
-        'Contribute to Agile ceremonies to align with sprint objectives and deepen understanding of benefits compliance workflows and HR platform architecture.',
-        'Develop GraphQL queries and mutations in the Spring Boot backend to streamline data retrieval and updates for benefits modules, improving efficiency and reducing over-fetching.'        
+        'Design and develop scalable Java Spring Boot microservices for TriNet’s benefits platform, owning API contracts, backend workflows, and integrations with Angular-based client applications.',
+        'Lead cross-functional design reviews for benefits and insurance modules, partnering with UI/UX designers and senior engineers to define scalable backend APIs, data models, and frontend integration standards.',
+        'Design reusable, responsive Angular components and implement NgRx state management in collaboration with UI/UX designers, optimizing application performance and overall user experience.',
+        'Oversee integration between Angular modules and Spring Boot APIs across eligibility, configuration, and enrollment workflows, ensuring consistent and reliable data flow across the benefits platform.',
+        'Designed and optimized GraphQL queries and mutations within Spring Boot services for benefits modules, implementing caching strategies that improved response times by over 90% and eliminated query over-fetching.'        
       ]
     },
     {
@@ -66,14 +66,10 @@ export class WorkComponent implements OnInit {
       company: 'Staples INC.',
       icon: 'pi pi-briefcase',
       details: [
-        'Developed several core components of the store-based application ‘Solution Builder,’ which processes customer orders in Staples retail stores.',
-        'Refactored the application using Java, Angular and Spring Boot to meet evolving business needs, and designed an interactive web interface with Angular, HTML5, Bootstrap, and CSS3 to enhance user experience and display dynamic content.',
-        'Developed the backend for notifications using Java and Spring MVC to send email notifications to customers via SendGrid.',
-        'Designed and implemented Shutterstock editor integration by creating proof of concepts, developing a comprehensive integration plan, and resolving complex technical challenges.',
-        'Architected and implemented a new Kiosk application, covering system requirements, mockups, and seamless integration of third-party application (Shutterstock), effectively resolving all related challenges. Created REST API’s using Java with Spring MVC and built the frontend with HTML5, CSS, Angular 12 and Angular Material.',
-        'Assisted in designing Selenium test cases for UI testing.',
-        'Modified current set of applications based on the business requirements from clients and managed multiple tasks using Jira project management/ticketing tool.',
-        'Participated in the complete software life cycle development of the project which includes design, interface implementation, testing, review of the features, training and providing support.'
+        'Developed core components of the store-based application Solution Builder, which processes customer orders in Staples retail stores, improving order processing speed by ~25%.',
+        'Refactored the application using Java, Angular, TypeScript, and Spring Boot to meet evolving business needs, and designed an interactive web interface with Angular enhancing user experience and reducing page load times by ~30%.',
+        'Built backend notification services using Java and Spring MVC to send customer email alerts via SendGrid.',
+        'Spearheaded the evaluation and end-to-end integration of the Shutterstock editor into Staples\' retail platform, delivering a new Kiosk Application by defining requirements, creating mockups, building REST APIs in Java/Spring MVC, and developing the Angular based frontend, ultimately reducing customer wait times by ~20%.'
       ]
     },
     {

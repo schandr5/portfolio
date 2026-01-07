@@ -9,6 +9,7 @@ export class AppConstants {
     ABOUT: 'About',
     WORK: 'Work Experience',
     PROJECTS: 'Projects',
+    GEN_AI_PROJECTS: 'Gen AI Projects',
     SKILLS: 'Technical Skills',
     ACADEMICS: 'Education',
     CERTIFICATIONS: 'Certifications',
@@ -20,6 +21,7 @@ export class AppConstants {
   static readonly NAV_LABELS = {
     WORK: 'WORK',
     PROJECTS: 'PROJECTS',
+    GEN_AI_PROJECTS: 'GEN AI PROJECTS',
     SKILLS: 'SKILLS',
     ACADEMICS: 'ACADEMICS',
     CERTIFICATIONS: 'CERTIFICATIONS',
@@ -32,6 +34,7 @@ export class AppConstants {
     ABOUT: '/about',
     WORK: '/work',
     PROJECTS: '/projects',
+    GEN_AI_PROJECTS: '/gen-ai-projects',
     SKILLS: '/skills',
     ACADEMICS: '/academics',
     CERTIFICATIONS: '/certifications',

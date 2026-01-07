@@ -29,18 +29,6 @@ export class ProjectsComponent implements OnInit {
   }
   projects = [
     {
-      title: 'Budget Analyzer',
-      date: '2025 (Ongoing)',
-      details: [
-        'Building a comprehensive full-stack budget management application with Angular frontend and Spring Boot backend, featuring secure user authentication and GraphQL API integration.',
-        'Implementing intelligent expense tracking with 30-day transaction history, budget allocation management, and AI-powered spending insights using Gen-AI integration.',
-        'Designing and developing a complete database schema with User, Transaction, and Budget entities, including budget modification history tracking with active/inactive flags.',
-        'Creating responsive UI with multiple user flows: registration, login, budget setup, transaction tracking, and AI-powered budget analysis with personalized recommendations.',
-        'Developing robust Spring Boot backend with GraphQL API, secure authentication system, and comprehensive database design with proper foreign key relationships and data integrity constraints.',
-        'Integrating GraphQL for efficient data fetching and implementing secure user session management with proper authentication and authorization flows.'
-      ]
-    },
-    {
       title: 'About This Website',
       date: '2025',
       details: [
