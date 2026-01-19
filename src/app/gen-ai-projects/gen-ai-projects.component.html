@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">
-        <h1 class="page-title">{{ t.title || constants.PAGE_TITLES.GEN_AI_PROJECTS }}</h1>
+        <h1 class="page-title">{{ t.title }}</h1>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
               <i class="pi pi-sparkles"></i>
             </div>
             <div class="project-badge" *ngIf="i === 0">
-              <span class="badge featured-badge">{{ t.latest || constants.BADGES.LATEST }}</span>
+              <span class="badge featured-badge">{{ t.latest }}</span>
             </div>
           </div>
           
@@ -29,7 +29,7 @@
             <span class="project-date">{{ project.date }}</span>
             
             <div class="project-description">
-              <h5 class="description-title">{{ t.projectHighlights || constants.SECTIONS.PROJECT_HIGHLIGHTS }}</h5>
+              <h5 class="description-title">{{ t.projectHighlights }}</h5>
               <ul class="project-features">
                 <li *ngFor="let point of project.details" class="feature-item">
                   <i class="bi bi-arrow-right-circle-fill"></i>

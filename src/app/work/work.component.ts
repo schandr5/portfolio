@@ -37,7 +37,7 @@ export class WorkComponent implements OnInit {
         'Design and develop scalable Java Spring Boot microservices for TriNet’s benefits platform, owning API contracts, backend workflows, and integrations with Angular-based client applications.',
         'Lead cross-functional design reviews for benefits and insurance modules, partnering with UI/UX designers and senior engineers to define scalable backend APIs, data models, and frontend integration standards.',
         'Design reusable, responsive Angular components and implement NgRx state management in collaboration with UI/UX designers, optimizing application performance and overall user experience.',
-        'Oversee integration between Angular modules and Spring Boot APIs across eligibility, configuration, and enrollment workflows, ensuring consistent and reliable data flow across the benefits platform.',
+        'Lead and implement integration between Angular modules and Spring Boot APIs across eligibility, configuration, and enrollment workflows, ensuring consistent and reliable data flow across the benefits platform.',
         'Designed and optimized GraphQL queries and mutations within Spring Boot services for benefits modules, implementing caching strategies that improved response times by over 90% and eliminated query over-fetching.'        
       ]
     },

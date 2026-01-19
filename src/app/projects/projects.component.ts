@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
       details: [
         'Developed this portfolio website using Angular 17.',
         'Implemented key Angular concepts such as components, services, routing, dependency injection, and reactive forms.',
-        'Deployed the website on Amazon S3 for hosting, ensuring fast performance and easy access.'
+        'Deployed the website on Vercel for hosting and deployment.'
       ]
     },
     {

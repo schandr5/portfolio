@@ -14,17 +14,30 @@ import { AppConstants } from '../constants/app.constants';
 })
 export class GenAiProjectsComponent implements OnInit {
   constants = AppConstants;
-  t: any = {};
+  t: any = {
+    title: AppConstants.PAGE_TITLES.GEN_AI_PROJECTS,
+    latest: AppConstants.BADGES.LATEST,
+    projectHighlights: AppConstants.SECTIONS.PROJECT_HIGHLIGHTS
+  };
 
   constructor(private translationService: TranslationService) {}
 
   ngOnInit(): void {
     this.translationService.loadTranslations().subscribe(() => {
-      this.t = {
-        title: this.translationService.get('genAiProjects.title'),
-        latest: this.translationService.get('genAiProjects.latest'),
-        projectHighlights: this.translationService.get('genAiProjects.projectHighlights')
-      };
+      const title = this.translationService.get('genAiProjects.title');
+      const latest = this.translationService.get('genAiProjects.latest');
+      const projectHighlights = this.translationService.get('genAiProjects.projectHighlights');
+      
+      // Only update if we got a valid translation (not the key itself)
+      if (title && title !== 'genAiProjects.title') {
+        this.t.title = title;
+      }
+      if (latest && latest !== 'genAiProjects.latest') {
+        this.t.latest = latest;
+      }
+      if (projectHighlights && projectHighlights !== 'genAiProjects.projectHighlights') {
+        this.t.projectHighlights = projectHighlights;
+      }
     });
   }
   
