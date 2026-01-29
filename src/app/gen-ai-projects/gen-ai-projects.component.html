@@ -12,8 +12,12 @@
 <!-- Gen AI Projects Grid -->
 <div class="gen-ai-projects-section">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 mb-4" *ngFor="let project of projects; let i = index">
+    <div class="row" [class.single-project-row]="projects.length === 1">
+      <div
+        class="mb-4"
+        *ngFor="let project of projects; let i = index"
+        [ngClass]="projects.length === 1 ? 'col-12' : 'col-lg-6 col-md-6'"
+      >
         <div class="project-card" [class.featured]="i === 0">
           <div class="project-card-header">
             <div class="project-icon">
@@ -27,6 +31,10 @@
           <div class="project-card-body">
             <h3 class="project-title">{{ project.title }}</h3>
             <span class="project-date">{{ project.date }}</span>
+
+            <p class="project-one-liner" *ngIf="project.oneLiner">
+              {{ project.oneLiner }}
+            </p>
             
             <div class="project-description">
               <h5 class="description-title">{{ t.projectHighlights }}</h5>
@@ -37,16 +45,40 @@
                 </li>
               </ul>
             </div>
+
+            <div class="project-gallery" *ngIf="project.images?.length">
+              <h5 class="gallery-title">Screenshots</h5>
+              <div class="gallery-strip" role="list">
+                <a
+                  class="gallery-item"
+                  *ngFor="let img of project.images"
+                  [href]="img.src"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [attr.aria-label]="img.alt"
+                  role="listitem"
+                >
+                  <img [src]="img.src" [alt]="img.alt" loading="lazy" />
+                </a>
+              </div>
+              <div class="gallery-hint">Tip: scroll horizontally and click to open full-size.</div>
+            </div>
           </div>
           
           <div class="project-card-footer">
             <div class="tech-stack">
               <span class="tech-tag" *ngFor="let tech of project.techStack">{{ tech }}</span>
             </div>
-            <div class="project-links" *ngIf="project.githubUrl">
-              <a [href]="project.githubUrl" target="_blank" class="github-link">
+            <div class="project-links" *ngIf="project.links?.length">
+              <a
+                *ngFor="let link of project.links"
+                [href]="link.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
                 <i class="bi bi-github"></i>
-                <span>View on GitHub</span>
+                <span>{{ link.label }}</span>
               </a>
             </div>
           </div>

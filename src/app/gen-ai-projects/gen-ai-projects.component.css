@@ -17,6 +17,15 @@
   background: #f8f9fa;
 }
 
+.single-project-row {
+  justify-content: center;
+}
+
+.single-project-row .project-card {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .project-card {
   background: white;
   border-radius: 16px;
@@ -101,8 +110,84 @@
   font-weight: 500;
 }
 
+.project-one-liner {
+  color: #495057;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: -8px 0 18px;
+}
+
 .project-description {
   flex: 1;
+}
+
+.project-gallery {
+  margin-top: 22px;
+}
+
+.gallery-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-title::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: linear-gradient(135deg, #8a2be2 0%, #ba55d3 100%);
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.gallery-strip {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-strip::-webkit-scrollbar-thumb {
+  background: rgba(138, 43, 226, 0.25);
+  border-radius: 999px;
+}
+
+.gallery-item {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.gallery-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.18);
+}
+
+.gallery-item img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #6c757d;
 }
 
 .description-title {
@@ -194,6 +279,9 @@
 
 .project-links {
   margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .github-link {
@@ -249,6 +337,11 @@
   .project-icon i {
     font-size: 1.2rem;
   }
+
+  .gallery-item img {
+    width: 210px;
+    height: 130px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -281,6 +374,11 @@
   .tech-tag {
     font-size: 0.7rem;
     padding: 3px 8px;
+  }
+
+  .gallery-item img {
+    width: 240px;
+    height: 150px;
   }
 }
 
